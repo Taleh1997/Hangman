@@ -70,7 +70,15 @@ window.addEventListener('keyup', (e) => {
         compChoose()
         converter(compChoosen)
         numbers(compChoosen)
-    };
+    } else if (compChoosen.includes(e.key) && newNum == 0) {
+        wrongLetters = []
+        correctLetters = []
+        array.innerHTML = `${wrongLetters}`
+        compChoose()
+        converter(compChoosen)
+        numbers(compChoosen)
+    }
+    ;
 })
 
 compChoose()
